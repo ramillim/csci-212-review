@@ -27,6 +27,26 @@ public class CompareStringsAlphabetically {
      * return false.
      */
     public static boolean isInAlphabeticalOrder(String s1, String s2) {
-        throw new UnsupportedOperationException("Delete this line and write your solution here.");
+        // Or simply use int minLength = Math.min(s1.length(), s2.length());
+
+        int minLength;
+        if (s1.length() < s2.length()) {
+            minLength = s1.length();
+        } else {
+            minLength = s2.length();
+        }
+
+        for (int i = 0; i < minLength; i++) {
+            char c1 = s1.charAt(i);
+            char c2 = s2.charAt(i);
+            if (c1 < c2) {
+                return true;
+            } else if (c1 > c2) {
+                return false;
+            }
+        }
+        // If one string is a prefix of the other, the shorter string comes first.
+        // If s1 is shorter or equal to s2, then it's in alphabetical order.
+        return s1.length() <= s2.length();
     }
 }
