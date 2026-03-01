@@ -2,7 +2,6 @@ package org.csci212.exam1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * This practice problem exercises the ARR, LIST1, and STR learning objectives.
@@ -17,17 +16,17 @@ public class AlphabetizeTwoStringLists {
     public static void main(String[] args) {
         // Test Case
         ArrayList<String> list1 = new ArrayList<>(Arrays.asList(
-            "Elizabeta", "Khasan", "Jiang", "Zorica"
+                "Elizabeta", "Khasan", "Jiang", "Zorica"
         ));
         ArrayList<String> list2 = new ArrayList<>(Arrays.asList(
-            "Stanislav", "Humberto", "Megan", "Dhaval", "Eleanore"
+                "Stanislav", "Humberto", "Megan", "Dhaval", "Eleanore"
         ));
 
         String[] result = alphabetize(list1, list2);
 
         System.out.println(Arrays.toString(result));
         System.out.println(Arrays.equals(result, new String[] {"Dhaval", "Eleanore", "Elizabeta",
-            "Humberto", "Jiang", "Khasan", "Megan", "Stanislav", "Zorica"}));
+                "Humberto", "Jiang", "Khasan", "Megan", "Stanislav", "Zorica"}));
         // The result should print:
         // ["Dhaval", "Eleanore", "Elizabeta", "Humberto", "Jiang", "Khasan", "Megan", "Stanislav", "Zorica"]
         // true
