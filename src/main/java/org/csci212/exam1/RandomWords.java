@@ -1,6 +1,8 @@
 package org.csci212.exam1;
 
 
+import java.util.Arrays;
+
 /**
  * This problem is from the Fall 2024 Midterm 1 review session.
  *
@@ -36,6 +38,41 @@ package org.csci212.exam1;
  */
 public class RandomWords {
     public static void main(String[] args) {
-        // Test your methods here.
+        String[][] arr2D = {
+            {"yes", "no", "up"},
+            {"maybe", "right", "left"},
+            {"right", "right", "left"},
+            {"up", "right", "down"}
+        };
+        String[] result = makeMultipleWords(arr2D);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static String makeWordFromArray(String[] arr) {
+        StringBuilder builder = new StringBuilder();
+
+        for (String word : arr) {
+            // Since Math.random() returns a double from 0.0 to 1 (exclusive), multiply it by the
+            // n = length of the word and cast to an int to get an integer from 0 to n (exclusive).
+            var randomIndex = (int)(Math.random() * word.length());
+            var letter = word.charAt(randomIndex);
+            builder.append(letter);
+        }
+
+        return builder.toString();
+    }
+
+    public static String[] makeMultipleWords(String[][] arr2D) {
+        // We know that the number of elements in the resulting array is equal to the number of
+        // rows in the 2D array.
+        String[] result = new String[arr2D.length];
+
+        // Iterate through each row and make a word from it. Store the result in the array at the
+        // corresponding element to the row index number.
+        for (int i = 0; i < arr2D.length; i++) {
+            result[i] = makeWordFromArray(arr2D[i]);
+        }
+
+        return result;
     }
 }
