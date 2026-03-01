@@ -33,7 +33,8 @@ public class AlphabetizeTwoStringLists {
     }
 
     /**
-     * Alphabetizes two lists of strings. The lists can be of different lengths.
+     * Alphabetizes two lists of strings. The lists can be of different lengths. For this solution,
+     * you can use String.compareTo() to compare strings lexicographically.
      *
      * @param list1 A non-empty list of strings with names consisting entirely of letters.
      * @param list2 A non-empty list of strings with names consisting entirely of letters.
