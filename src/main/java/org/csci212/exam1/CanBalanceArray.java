@@ -10,9 +10,14 @@ public class CanBalanceArray {
         System.out.println(canBalance(new int[] {1, 1, 1, 2, 1} ));
         System.out.println(canBalance(new int[] {10, 10} ));
         System.out.println(canBalance(new int[] {10, 0, 1, -1, 10} ));
+        System.out.println(canBalance(new int[] {1, 2, 3, 1, 0, 2, 3} ));
+
 
         // Test cases that return false
+        System.out.println(canBalance(new int[] {1} ));
+        System.out.println(canBalance(new int[] {1, 2, 3, 1, 0, 1, 3} ));
         System.out.println(canBalance(new int[] {2, 1, 1, 2, 1} ));
+        System.out.println(canBalance(new int[] {2, 1, 1, 1, 4} ));
         System.out.println(canBalance(new int[] {2, 3, 4, 1, 2} ));
     }
 
